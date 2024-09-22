@@ -1,0 +1,13 @@
+# IDE files
+.vscode/
+.idea/
+
+# output directory
+dist/
+
+# modules directory
+node_modules/
+
+# lock files
+package-lock.json
+yarn.lock

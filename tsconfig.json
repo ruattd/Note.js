@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "commonjs",
+//    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
