@@ -1,15 +1,33 @@
 {
+  "name": "note-js",
+  "version": "1.0.0",
+  "description": "A powerful notebook generator, powered by Node.js & TypeScript",
+  "license": "MIT",
+  "repository": "ruattd/Note.js",
+  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "bin": {
+    "notejs": "./dist/index.js"
+  },
   "dependencies": {
     "chalk": "^5.3.0",
-    "ts-node": "^10.9.2",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.5.4"
   },
+  "type": "module",
   "scripts": {
-    "build": "tsc -b",
-    "clean": "tsc -b --clean"
+    "build": "npx tsc -b",
+    "clean": "npx tsc -b --clean",
+    "start": "npx tsx src/index.ts",
+    "startjs": "node dist/index.js"
   },
-  "license": "MIT",
   "devDependencies": {
+    "@types/figlet": "^1.5.8",
     "@types/node": "^22.5.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

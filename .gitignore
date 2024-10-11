@@ -11,3 +11,7 @@ node_modules/
 # lock files
 package-lock.json
 yarn.lock
+
+# system files
+.DS_Store
+Thumbs.db
