@@ -54,7 +54,7 @@ export function main(pkg: any, instance: Command) {
         .action(commands.build)
 
     // command: generate
-    instance.command("generate").alias("gen").alias("g")
+    instance.command("generate").alias("g").alias("gen")
         .description("alias to 'build' for Hexo users")
         .action(args => {
             console.warn("This is NOT Hexo, please use 'build' instead")
@@ -67,7 +67,7 @@ export function main(pkg: any, instance: Command) {
         .action(commands.clean)
 
     // command: server
-    instance.command("server").alias("s")
+    instance.command("server").alias("s").alias("srv")
         .description("start a debug server")
         .action(commands.server)
 
