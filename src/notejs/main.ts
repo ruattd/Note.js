@@ -15,7 +15,7 @@ export function main(pkg: any, instance: Command) {
     // options
     instance
         .option("-c, --cli", "run as a CLI program with no keyboard interaction", false)
-        .option("-i, --silent", "only necessary output", false)
+        .option("-i, --silent", "silent mode, with only necessary outputs", false)
         .option("-d, --dir, --directory", "specify work directory, default to current directory", ".")
 
     // default action
@@ -41,7 +41,10 @@ export function main(pkg: any, instance: Command) {
     // command: help
     instance.command("help").alias("h")
         .description("display help for command, same as '--help'")
-        .action(() => instance.outputHelp())
+        .action(() => {
+            if (instance.opts().silent) console.warn("You don't need help in silent mode")
+            else instance.outputHelp()
+        })
 
     // command: version
     instance.command("version")
